@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2)format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2)format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2)format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2)format(woff2);
+  font-display: swap;
+}
+
+body{
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color:black;
+  background-color: #FFFFFF ;
+}
+
+.main-header {
+  color: black;
+  background-color: #FFFFFF;
+}
+
+.navigation-link {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  text-transform: capitalize;
+  background-color:#FFFFFF;
+  color:black;
+  text-decoration:none ;
+}
+
+.navigation-link-here {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color:white;
+  background-color: #756157;
+}
+
+.main-index {
+  background-color: #FFFFFF;
+  color:black;
+}
+
+.background-image {
+  background-color: #58b8f8;
+  width: 1200px;
+  height: 485px;
+  background-image: url(../images/index-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.descriptions-title{
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align:center;
+}
+
+.advantages-list{
+  text-align: center;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-titel {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform:uppercase;
+}
+
+.advantages-item-with-photo {
+  color:white;
+  background-color: #82B3D3;
+}
+
+.advantages-item-dark-blue{
+  background-color:rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-white {
+  background-color: #FFFFFF;
+}
+
+.booking-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.booking-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center
+}
+
+.button-booking {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: #756157;
+}
+
+.mailing {
+  color:white;
+  background-color:rgba(131, 179, 211, 0.2);
+  width: 1200px;
+  background-image: url(../images/background-mailing.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+/* картиинка очень размывчивая и не входит полность*/
+}
+
+.mailing-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.mailing-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align:center;
+}
+
+.button-mailing {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color:white;
+}
+
+.contacts-phone {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color:#FFFFFF;
+  color:black;
+  text-decoration:none ;
+}
+
+.filters {
+  width: 1200px;
+  height: 412px;
+  background-image: url(../images/inner-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  color:white;
+  background-color: rgb(6, 6, 138);
+}
+a {
+  text-decoration: none;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color:white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.find {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.catalog-filter-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.control {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.product-list {
+  color:black;
+  background-color: #FFFFFF;
+}
+
+.button {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color:white;
+  background-color: #82B3D3;
+ }
+
+.product-card-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: black;
+  text-decoration: none;
+}
+
+
+.raiting {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mailing-catalog {
+  color:black;
+  background-color: #FFFFFF;
+}
