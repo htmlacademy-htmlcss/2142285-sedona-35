@@ -35,25 +35,26 @@ body{
   font-size: 18px;
   line-height: 21px;
   color:black;
-  background-color: white ;
+  background-color: #FFFFFF ;
 }
 
 .main-header {
   color: black;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
-a.navigation-link {
+.navigation-link {
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
   text-align: center;
   text-transform: capitalize;
-  background-color:white;
+  background-color:#FFFFFF;
   color:black;
   text-decoration:none ;
 }
+
 .navigation-link-here {
   font-style: normal;
   font-weight: 700;
@@ -64,35 +65,36 @@ a.navigation-link {
   color:white;
   background-color: #756157;
 }
+
 .main-index {
-  background-color: white;
+  background-color: #FFFFFF;
   color:black;
 }
 
 .background-image {
+  background-color: #58b8f8;
   width: 1200px;
   height: 485px;
   background-image: url(../images/index-background.jpg);
-  background-color: white;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
 }
 
 .descriptions-title{
-  font-size: 38pxx;
-  font-weight: 700;;
+  font-size: 38px;
+  font-weight: 700;
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
 }
 
- .description {
+.description {
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
   text-align:center;
- }
+}
 
 .advantages-list{
   text-align: center;
@@ -106,17 +108,17 @@ a.navigation-link {
   text-transform:uppercase;
 }
 
-.advantages-item-1,.advantages-item-5 {
+.advantages-item-with-photo {
   color:white;
   background-color: #82B3D3;
 }
 
-.advantages-item-3{
+.advantages-item-dark-blue{
   background-color:rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item-6 {
-  background-color: white;
+.advantages-item-white {
+  background-color: #FFFFFF;
 }
 
 .booking-title {
@@ -144,7 +146,7 @@ a.navigation-link {
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: white;
   background-color: #756157;
 }
 
@@ -152,7 +154,6 @@ a.navigation-link {
   color:white;
   background-color:rgba(131, 179, 211, 0.2);
   width: 1200px;
-  height: 485px;
   background-image: url(../images/background-mailing.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -194,7 +195,7 @@ a.navigation-link {
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
-  background-color:white;
+  background-color:#FFFFFF;
   color:black;
   text-decoration:none ;
 }
@@ -207,13 +208,13 @@ a.navigation-link {
   background-position: center;
   background-attachment: scroll;
   color:white;
-  background-color: blue;
+  background-color: rgb(6, 6, 138);
 }
 a {
   text-decoration: none;
 }
 
-a.breadcrumbs-link {
+.breadcrumbs-link {
   text-decoration: none;
   color:white;
   font-style: normal;
@@ -222,7 +223,7 @@ a.breadcrumbs-link {
   line-height: 21px;
 }
 
-  .find{
+.find {
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -241,12 +242,12 @@ a.breadcrumbs-link {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 23px
+  line-height: 23px;
 }
 
 .product-list {
   color:black;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .button {
@@ -281,5 +282,5 @@ a.breadcrumbs-link {
 
 .mailing-catalog {
   color:black;
-  background-color: white;
+  background-color: #FFFFFF;
 }
