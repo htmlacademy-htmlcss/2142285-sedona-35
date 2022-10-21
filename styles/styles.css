@@ -66,13 +66,16 @@ body{
 }
 
 .navigation-logo {
+  display: block;
   box-sizing: border-box;
   width: 138px;
   padding-right: 12px;
+  margin: 0;
 }
 
 .navigation {
   display: flex;
+  justify-content: space-between;
   width: 1200px;
 }
 
@@ -90,18 +93,15 @@ body{
   list-style-type: none;
   padding: 0;
   max-width: 308px;
-  margin-left: auto;
-
- }
-
- .navigation-user .navigation-link-here {
-  min-width: 44px;
-  min-height: 64px;
+  margin: 0;
  }
 
 .navigation-link {
   display: block;
-  padding: 32px 20px;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 32px;
   text-transform: capitalize;
   background-color:#FFFFFF;
   color:black;
@@ -113,6 +113,8 @@ body{
 }
 
 .navigation-link-here {
+  display: block;
+  box-sizing: border-box;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -121,6 +123,9 @@ body{
   text-transform: uppercase;
   color:white;
   background-color: #756157;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding: 0;
 }
 
 .main-index {
@@ -222,17 +227,14 @@ body{
   padding-left: 112px;
   padding-bottom: 62px;
 }
-/*не работает псевдо класс :nth-child() на .advantage-title*/
+/*не работает псевдокласс :nth-child() на .advantage-title*/
 
-ul>li>p {
-  margin: 0;
+.advantage-description {
   padding-left: 85px;
   padding-right: 85px;
-  padding-bottom: 121px;
+  padding-bottom: 112px;
   text-align: center;
 }
-
-
 
 .booking-title {
   font-style: normal;
@@ -313,6 +315,7 @@ ul>li>p {
   padding-right: 362px;
   padding-bottom: 54px;
 }
+/*не совпадает с макетом*/
 
 .button-mailing {
   font-style: normal;
@@ -335,12 +338,26 @@ ul>li>p {
   background-color: #FFFFFF;
 }
 
-.footer-social {
-  width: 150px;
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 162px;
+}
+
+.footer-social-item {
+  display: block;
+  width: 24px;
+  height: 14px;
+  padding-top: 57px;
+  padding-bottom: 47px;
+  margin-right: 27px;
 }
 
 .contacts-phone {
-  width: 331px;
+  min-width: 331px;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -349,11 +366,18 @@ ul>li>p {
   text-transform: uppercase;
   background-color:#FFFFFF;
   color:black;
-  text-decoration:none ;
+  text-decoration:none;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 45px;
+  margin-bottom: 35px;
 }
 
 .logo-html {
+  display: block;
+  box-sizing: border-box;
   width: 120px;
+  padding-top: 48px;
 }
 
 .main-container {
@@ -371,10 +395,21 @@ a {
   text-decoration: none;
 }
 
-.breadcrumbs {
+.inner-header {
   margin: 0;
-  padding-top: 8px;
   padding-left: 70px;
+  padding-top: 35px;
+  padding-bottom: 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin-top: 8px;
+  padding-left: 70px;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
@@ -384,56 +419,7 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
-}
-
-h1.inner-header {
-  margin: 0;
-  padding-left: 70px;
-  padding-top: 35px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 60px;
-
-}
-
-
-.find {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  margin: 0;
-  padding: 0;
-}
-
-
-.find-container {
-  display: flex;
-  box-sizing: border-box;
-  width: 1200px;
-  justify-content: space-between;
-  padding-left: 70px;
-  padding-right: 70px;
-  margin: 0;
-}
-
-.button-icon {
-  margin: 0;
-  padding: 0;
-}
-
-.product-container {
-  display: flex;
-  width: 1060px;
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
-.pagination{
-  display: flex;
-  width: 1060px;
-  padding-left: 70px;
-
+  padding-right: 28px;
 }
 
 .catalog-filter-title {
@@ -444,17 +430,76 @@ h1.inner-header {
   text-transform: capitalize;
 }
 
-.control {
+.find {
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.find-container {
+  display: flex;
+  box-sizing: border-box;
+  width: 1200px;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 58px;
+  padding-bottom: 58px;
+  margin: 0;
+}
+
+.button-icon {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-container {
+  display: flex;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  width: 1200px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .product-list {
+  display: flex;
+  flex-wrap: wrap;
   color:black;
   background-color: #FFFFFF;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+
+.product-card {
+  display: block;
+  box-sizing: border-box;
+  padding-right: 60px;
+  padding-bottom: 70px;
+  width: 340px;
+  height: 438px;
+}
+
+.product-card:nth-child(3n){
+  padding-right: 0;
+}
+
+.product-card-title {
+  padding-top: 16px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: black;
+  text-decoration: none;
+  }
 
 .button {
   font-style: normal;
@@ -467,15 +512,6 @@ h1.inner-header {
   background-color: #82B3D3;
 }
 
-.product-card-title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: black;
-  text-decoration: none;
-}
-
 .raiting {
   font-style: normal;
   font-weight: 400;
@@ -485,16 +521,42 @@ h1.inner-header {
   text-transform: uppercase;
 }
 
+.pagination{
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 70px;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  margin: 0;
+  list-style-type: none;
+  background-color: #FFFFFF;
+}
+
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  font-style: normal;
+  padding: 11px 23px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  background: #82B3D3;
+  text-align: center;
+  margin: 4px;
+}
+
+.pagination-current {
+  background: #F2F2F2;
+}
+
 .mailing-catalog {
   color:black;
   background-color: #FFFFFF;
   text-align: center;
 }
 
-.p {
-  margin: 0;
-  padding: 0;
-}
 
 .visually-hidden {
   position: absolute;
