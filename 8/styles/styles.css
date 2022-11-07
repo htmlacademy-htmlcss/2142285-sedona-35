@@ -1,0 +1,917 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2)format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2)format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2)format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2)format(woff2);
+  font-display: swap;
+}
+html {
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background: #F2F2F2;
+}
+
+.button {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color:white;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  border: 0;
+  padding: 0;
+}
+
+.button-brow:hover {
+  background: #615048;
+}
+
+.button-brow:focus {
+  background: #615048;
+  outline: none;
+}
+
+.button-brow:active {
+ background: #756157;
+ color: rgba(255, 255, 255, 0.3);
+}
+
+.button-blue:hover {
+  background: #68A2CA;
+}
+
+.button-blue:focus {
+  background: #68A2CA;
+  outline: none;
+}
+
+.button-blue:active {
+  background: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-green:hover {
+  background: #6C9E42;
+}
+
+.button-green:focus {
+  background: #6C9E42;
+  outline: none;
+}
+
+.button-green:active {
+  background: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* не понимаю как сделать ссылку не активной через псевдокласс, нашла только такой вариант
+.button-brow {
+ pointer-events: none;
+ background: #E5E5E5;
+ color: #FFFFFF
+}
+*/
+
+
+.container {
+  width: 1280px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-right: 40px;
+  padding-left: 40px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-header {
+  display: flex;
+  box-sizing: border-box;
+  width: 1200px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #FFFFFF;
+}
+
+.navigation-logo {
+  display: block;
+  box-sizing: border-box;
+  margin-right: 44px;
+}
+
+/*не пойму как сделать, чтобы логотип находил на фон hero-блока*/
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 946px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 422px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  width: 290px;
+  margin: 0;
+ }
+
+.navigation-link {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  color: #000000;
+  text-decoration:none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.navigation-link-current{
+  position: relative;
+}
+
+.navigation-link-current::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 31px;
+  width: calc(100% - 31px);
+  border-bottom: 2px solid #756257;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-top: 23px;
+}
+
+/*нужно ли цифры отделять от сердечка?*/
+
+.navigation-link-here {
+  display: block;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #FFFFFF;
+  background-color: #756157;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding: 8px 34px 8px 34px;
+  cursor: pointer;
+}
+
+.main-index {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.background-image {
+  background-color: #58b8f8;
+  width: 1200px;
+  height: 485px;
+  background:  url(../images/index-background.jpg);
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 51px;
+}
+
+/*не получаетсся поставить зубчики внизу, добаляю в background через запятую второй url (), но ничего не появляется, пробывала ерез пвседоэлемент, тоже не выхоит) */
+
+.descriptions-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 69px;
+  margin-right: 290px;
+  margin-left: 290px ;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.description {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align:center;
+  margin: 0;
+  margin-bottom: 90px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(131, 179, 211, 0.12);
+  list-style-type: none;
+}
+
+.advantage-title {
+  margin: 0;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform:uppercase;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.advantage-title-with-icon {
+  margin: 0;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform:uppercase;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.advantages-item-with-photo {
+  display: flex;
+  background-color: #82B3D3;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.advantage-item {
+  display: grid;
+  width: 230px;
+  margin-top: 92px;
+  margin-left: 85px;
+  margin-right: 85px;
+  margin-bottom: 111px;
+}
+
+.advantage-item:before {
+  order: 2;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  content: "";
+  margin-bottom: 30px;
+  margin-right: 85px;
+  margin-left: 85px;
+}
+
+.advantage-text {
+  display: grid;
+  width: 230px;
+  margin-top: 103px;
+  margin-bottom: 121px;
+  margin-left: 85px;
+  margin-right: 85px;
+}
+
+.advantages-item-dark-blue{
+  width: 400px;
+  background-color:rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-blue {
+   width: 400px;
+}
+
+.advantages-item-white {
+  width: 400px;
+  background-color: #FFFFFF;
+}
+
+.advantage-description {
+  order: 3;
+  margin:0;
+  padding: 0;
+  text-align: center;
+}
+
+.advantage-text-with-icon {
+  position: relative;
+  width: 230px;
+  padding: 182px 85px 81px 85px;
+}
+
+.advantage-text::before {
+  order: 2;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  content: "";
+  margin-bottom: 30px;
+  margin-right: 85px;
+  margin-left: 85px;
+}
+
+.advantage-icon {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin:auto;
+
+}
+
+.booking-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 96px 451px 20px 451px;
+
+}
+
+.booking-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  margin: 0 304px 54px 304px;
+}
+
+.button-booking {
+  display: block;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756157;
+  border-radius: 4px;
+  width: 376px;
+  margin: 0 412px 104px 412px;
+  padding: 8px 26px 8px 26px;
+}
+
+.mailing {
+  color:white;
+  background-color:rgba(131, 179, 211, 0.2);
+  background-image: url(../images/background-mailing.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+/* картиинка очень размывчивая и не входит полность*/
+}
+
+.mailing-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding-top: 96px;
+  padding-bottom: 20px;
+}
+
+.mailing-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align:center;
+  margin: 0;
+  padding-left: 362px;
+  padding-right: 362px;
+  padding-bottom: 54px;
+}
+
+.e-mail {
+display: flex;
+
+}
+
+.form-e-mail {
+  padding: 0;
+  margin: 0;
+}
+
+.button-mailing {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+
+.footer-container {
+  display: flex;
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 162px;
+}
+
+.footer-social-item {
+
+  display: block;
+  width: 24px;
+  height: 14px;
+  padding-top: 57px;
+  padding-bottom: 47px;
+  margin-right: 27px;
+}
+
+.footer-social-link:focus {
+  outline: none;
+}
+
+.footer-social-link:active {
+  background: rgba(104, 162, 202, 0.3);
+}
+
+
+.contacts-phone {
+  min-width: 331px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color:#FFFFFF;
+  color:#000000;
+  text-decoration:none;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 45px;
+  margin-bottom: 35px;
+}
+
+.contacts-phone:hover {
+  color: #756157;
+}
+
+.contacts-phone:focus {
+  color: #756157;
+  outline: none;
+}
+
+.contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.logo-html {
+  display: block;
+  box-sizing: border-box;
+  width: 120px;
+  padding-top: 48px;
+  padding-bottom: 38px;
+}
+
+.logohtml {
+  color:#000000;
+}
+
+.logohtml:hover {
+  color: #756157;
+}
+
+.logohtml:focus {
+  color: #756157;
+  outline: none;
+}
+
+.logohtml:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.main-inner {
+  background-color: #FFFFFF;
+  width: 1200px;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 1200px;
+  height: 412px;
+  background-color: #82B3D3;
+  background-image: url(../images/inner-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-text {
+  padding-top: 35px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin: 0;
+}
+
+.inner-header-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 40px;
+  list-style-type: none;
+  align-items: center;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color:#FFFFFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 7px 10px;
+  background-position: center left 10px;
+  padding-left: 30px;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #FFFFFF;
+  outline: none;
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.filter {
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 70px;
+}
+
+.catalog-filter {
+ display: flex;
+ justify-content: space-between;
+}
+
+.filter-container-left {
+  display: grid;
+  grid-template-columns: 151px 151px;
+  gap: 70px;
+}
+
+.filter-container-right {
+  display: grid;
+  grid-template-columns: 288px 191px;
+  gap: 70px;
+}
+
+.button-container {
+  display: grid;
+  row-gap: 40px;
+}
+
+.button-rest {
+  background: transparent;
+}
+
+.button-rest:hover {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-rest:focus {
+  color: #FFFFFF;
+  background: transparent;
+  outline: 3px solid #83B3D3 ;
+}
+
+.button-rest:active {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-filter-group {
+  display: flex;
+  border: 0;
+  padding: 0;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-filter-item {
+  padding-bottom: 16px;
+}
+
+.catalog-filter-title {
+  padding-bottom: 32px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.find-container {
+  display: flex;
+
+  justify-content: space-between;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 50px;
+  margin-bottom: 46px;
+  padding: 0;
+}
+
+.find {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.button-icon {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 160px;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.button-icon-item  {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+}
+
+.button-icon-item:hover {
+  border: 2px solid #000000;
+}
+
+.button-icon-item:focus svg {
+  border: 2px solid #68A2CA;
+  border-radius: 4px;
+}
+
+.button-icon-item:active {
+  border: 2px solid #000000;
+}
+
+.product-container {
+  background-color: #FFFFFF;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 40px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3,340px);
+  color: #000000;
+  background-color: #FFFFFF;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  width: 340px;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  flex-grow: 1;
+}
+
+.product-card-text {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  grid-template-columns: 140px 140px;
+  column-gap: 20px;
+  row-gap: 16px;
+}
+
+.product-card-title {
+  padding-top: 16px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.product-card-button-detail {
+  align-items: center;
+  background: #756157;
+  padding: 8px 20px 8px 20px;
+}
+
+.product-card-button {
+  align-items: center;
+  background: #82B3D3;
+  padding: 8px 20px 8px 20px;
+
+}
+
+.product-card-button-green {
+  align-items: center;
+  background: #7DB54F;
+  padding: 8px 20px 8px 20px;
+}
+
+.product-card-price {
+  text-align: right;
+}
+
+.hotel-stars-4 {
+ background-image: url(../images/hotel-star.svg);
+ background-repeat: space;
+ width: 80px
+}
+
+.hotel-stars-3 {
+  background-image: url(../images/hotel-star.svg);
+  background-repeat: space;
+  width: 60px
+}
+
+.hotel-stars-2 {
+  background-image: url(../images/hotel-star.svg);
+  background-repeat: space;
+  width: 40px
+}
+
+.raiting {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #F2F2F2;
+  border-radius: 4px;
+}
+
+.pagination{
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 70px;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  margin: 0;
+  list-style-type: none;
+}
+
+/*как сделать точки как в макете, через псевдоэлемент?*/
+
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  font-style: normal;
+  padding: 11px 23px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  background: #82B3D3;
+  text-align: center;
+  margin: 4px;
+  color: #FFFFFF;
+}
+
+.pagination-current {
+  background: #F2F2F2;
+  color: #000000;
+}
+
+.pagination-current:hover,
+ .pagination-current:focus,
+ .pagination-current:active{
+  background: #F2F2F2;
+  color: #000000;
+}
+
+.pagination-link:hover,
+.pagination-link:focus {
+  background: #68A2CA;
+}
+
+.pagination-link:active {
+  background: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.mailing-catalog {
+  color: #000000;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
