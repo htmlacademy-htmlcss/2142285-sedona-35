@@ -34,12 +34,14 @@ html {
 }
 
 body{
-  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background: #F2F2F2;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0;
 }
 
 .button {
@@ -54,6 +56,7 @@ body{
   border-radius: 4px;
   border: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 .button-brow:hover {
@@ -98,25 +101,21 @@ body{
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* не понимаю как сделать ссылку не активной через псевдокласс, нашла только такой вариант
-.button-brow {
- pointer-events: none;
- background: #E5E5E5;
- color: #FFFFFF
+.button:disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
+  cursor: default;
 }
-*/
-
 
 .container {
-  width: 1280px;
+  width: 1200px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding-right: 40px;
-  padding-left: 40px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background-color: #FFFFFF;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -133,9 +132,9 @@ body{
   display: block;
   box-sizing: border-box;
   margin-right: 44px;
+  margin-bottom: -10px;
+  z-index:1;
 }
-
-/*не пойму как сделать, чтобы логотип находил на фон hero-блока*/
 
 .navigation {
   display: flex;
@@ -200,7 +199,25 @@ body{
   padding-top: 23px;
 }
 
-/*нужно ли цифры отделять от сердечка?*/
+.heart {
+  position: relative;
+}
+
+.number-of-heart {
+  display: inline-block;
+  background: #7DB54F;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  padding: 3px;
+}
 
 .navigation-link-here {
   display: block;
@@ -229,13 +246,11 @@ body{
   background-color: #58b8f8;
   width: 1200px;
   height: 485px;
-  background:  url(../images/index-background.jpg);
+  background: url("../images/welcom-element.svg") bottom no-repeat, url("../images/index-background.jpg") no-repeat  ;
   text-align: center;
   box-sizing: border-box;
   padding-top: 51px;
 }
-
-/*не получаетсся поставить зубчики внизу, добаляю в background через запятую второй url (), но ничего не появляется, пробывала ерез пвседоэлемент, тоже не выхоит) */
 
 .descriptions-title {
   font-size: 30px;
@@ -279,17 +294,6 @@ body{
   padding-bottom: 30px;
   padding-right: 25px;
   padding-left: 25px;
-}
-
-.advantage-title-with-icon {
-  margin: 0;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform:uppercase;
-  text-align: center;
-  padding-bottom: 30px;
 }
 
 .advantages-item-with-photo {
@@ -348,10 +352,40 @@ body{
   text-align: center;
 }
 
-.advantage-text-with-icon {
-  position: relative;
-  width: 230px;
+.advantage-text-icon-house {
   padding: 182px 85px 81px 85px;
+  background-image: url("../images/icons/House.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position:center 80px;
+}
+
+.advantage-text-icon-food {
+  padding: 182px 85px 81px 85px;
+  background-image: url("../images/icons/food.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position:center 80px;
+}
+
+.advantage-text-icon-souvenir {
+  padding: 182px 85px 81px 85px;
+  background-image: url("../images/icons/souvenir.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position:center 80px;
+}
+
+.advantage-title-with-icon {
+  margin: 0;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform:uppercase;
+  text-align: center;
+  padding-bottom: 30px;
+
 }
 
 .advantage-text::before {
@@ -361,15 +395,6 @@ body{
   margin-bottom: 30px;
   margin-right: 85px;
   margin-left: 85px;
-}
-
-.advantage-icon {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
-  margin:auto;
-
 }
 
 .booking-title {
@@ -416,7 +441,6 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
-/* картиинка очень размывчивая и не входит полность*/
 }
 
 .mailing-title {
@@ -445,7 +469,6 @@ body{
 
 .e-mail {
 display: flex;
-
 }
 
 .form-e-mail {
@@ -454,8 +477,8 @@ display: flex;
 }
 
 .button-mailing {
-  padding: 0;
-  margin: 0;
+  padding: 8px 50px 8px 50px;
+  margin-bottom: 112px;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -487,7 +510,6 @@ display: flex;
 }
 
 .footer-social-item {
-
   display: block;
   width: 24px;
   height: 14px;
@@ -496,14 +518,21 @@ display: flex;
   margin-right: 27px;
 }
 
+.footer-social-link {
+  color: #83B3D3;
+}
+
+.footer-social-link:hover {
+  color: #68A2CA;;
+}
+
 .footer-social-link:focus {
-  outline: none;
+  color:#68A2CA;
 }
 
 .footer-social-link:active {
-  background: rgba(104, 162, 202, 0.3);
+  color: rgba(104, 162, 202, 0.3);
 }
-
 
 .contacts-phone {
   min-width: 331px;
@@ -563,58 +592,67 @@ display: flex;
 .main-inner {
   background-color: #FFFFFF;
   width: 1200px;
-  box-sizing: border-box;
-}
-
-.main-container {
-  width: 1200px;
-  height: 412px;
-  background-color: #82B3D3;
-  background-image: url(../images/inner-background.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: scroll;
-  color: #FFFFFF;
 }
 
 a {
   text-decoration: none;
 }
 
+.main-container {
+  min-height: 412px;
+  background-color: #82B3D3;
+  background-image: url("../images/inner-background.jpg");
+  background-size: cover;
+}
+
 .header-text {
-  padding-top: 35px;
-  padding-left: 70px;
-  padding-right: 70px;
-  margin: 0;
+  color: #FFFFFF;
+  padding: 35px 70px 70px 70px;
 }
 
 .inner-header-title {
+  font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
+  line-height: 78px;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin-bottom: 40px;
   list-style-type: none;
-  align-items: center;
+  margin:0;
+  padding: 0;
+  display: flex;
 }
 
 .breadcrumbs-link {
-  text-decoration: none;
   color:#FFFFFF;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 21px;
-  background-image: url(../images/arrow.svg);
+  display: inline-block;
+}
+
+.breadcrumbs-item {
+  margin-top: 8px;
+  margin-bottom: 40px;
+  margin-left: 3px;
+}
+
+.breadcrumbs-item:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 10px;
+  margin-left: 5px;
+  background-image: url("../images/arrow.svg");
   background-repeat: no-repeat;
-  background-size: 7px 10px;
-  background-position: center left 10px;
-  padding-left: 30px;
+  margin-right: 5px;
+}
+
+.breadcrumbs-icon {
+  padding-top: 5px;
 }
 
 .breadcrumbs-link:hover {
@@ -630,12 +668,6 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.filter {
-  margin-left: 70px;
-  margin-right: 70px;
-  margin-bottom: 70px;
-}
-
 .catalog-filter {
  display: flex;
  justify-content: space-between;
@@ -644,13 +676,25 @@ a {
 .filter-container-left {
   display: grid;
   grid-template-columns: 151px 151px;
-  gap: 70px;
+  gap:70px;
 }
 
 .filter-container-right {
   display: grid;
   grid-template-columns: 288px 191px;
   gap: 70px;
+}
+
+.control:hover {
+  opacity: 0.3;
+}
+
+.control-input:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.control:active {
+ opacity: 0.4;
 }
 
 .button-container {
@@ -676,6 +720,10 @@ a {
 .button-rest:active {
   background: transparent;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.reset-button:disabled {
+  opacity: 0.1;
 }
 
 .catalog-filter-group {
@@ -705,7 +753,6 @@ a {
 
 .find-container {
   display: flex;
-
   justify-content: space-between;
   margin-left: 70px;
   margin-right: 70px;
@@ -732,23 +779,16 @@ a {
   list-style: none;
 }
 
-.button-icon-item  {
-  width: 48px;
-  height: 48px;
-  border-radius: 4px;
+.button-icon-view:hover svg {
+  outline: 2px solid #000000;
 }
 
-.button-icon-item:hover {
-  border: 2px solid #000000;
+.button-icon-view:focus svg  {
+  outline: 2px solid #68A2CA;
 }
 
-.button-icon-item:focus svg {
-  border: 2px solid #68A2CA;
-  border-radius: 4px;
-}
-
-.button-icon-item:active {
-  border: 2px solid #000000;
+.button-icon-view:active svg {
+  outline: 2px solid #000000;
 }
 
 .product-container {
@@ -822,19 +862,19 @@ a {
 }
 
 .hotel-stars-4 {
- background-image: url(../images/hotel-star.svg);
+ background-image: url("../images/hotel-star.svg");
  background-repeat: space;
  width: 80px
 }
 
 .hotel-stars-3 {
-  background-image: url(../images/hotel-star.svg);
+  background-image: url("../images/hotel-star.svg");
   background-repeat: space;
   width: 60px
 }
 
 .hotel-stars-2 {
-  background-image: url(../images/hotel-star.svg);
+  background-image: url("../images/hotel-star.svg");
   background-repeat: space;
   width: 40px
 }
@@ -850,23 +890,27 @@ a {
   border-radius: 4px;
 }
 
+.catalog-line {
+  width: 1060px;
+  border: 1px solid #E6E6E6;
+  margin-bottom: 40px;
+}
+
 .pagination{
   display: flex;
   box-sizing: border-box;
-  padding-left: 70px;
-  padding-top: 10px;
-  padding-bottom: 60px;
-  margin: 0;
+  margin-left: 70px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  padding: 0;
   list-style-type: none;
+
 }
 
-/*как сделать точки как в макете, через псевдоэлемент?*/
-
-.pagination-link {
+.pagination-link:not(.pagination-point) {
   display: block;
   box-sizing: border-box;
-  width: 60px;
-  font-style: normal;
+  min-width: 60px;
   padding: 11px 23px;
   font-weight: 700;
   font-size: 20px;
@@ -875,6 +919,17 @@ a {
   text-align: center;
   margin: 4px;
   color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.pagination-point {
+  display: block;
+  min-width: 60px;
+  padding: 25px 0;
+  margin:0;
+  text-align: center;
+  min-width: 60px;
+  box-sizing: border-box;
 }
 
 .pagination-current {
@@ -882,19 +937,15 @@ a {
   color: #000000;
 }
 
-.pagination-current:hover,
- .pagination-current:focus,
- .pagination-current:active{
-  background: #F2F2F2;
-  color: #000000;
-}
-
-.pagination-link:hover,
-.pagination-link:focus {
+.pagination-link:not(.pagination-current):hover {
   background: #68A2CA;
 }
 
-.pagination-link:active {
+.pagination-link:not(.pagination-current):focus {
+  background: #68A2CA;
+}
+
+.pagination-link:not(.pagination-current):active {
   background: #82B3D3;
   color: rgba(255, 255, 255, 0.3);
 }
