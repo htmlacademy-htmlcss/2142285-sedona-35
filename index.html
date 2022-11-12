@@ -155,15 +155,18 @@
         </section>
 
         <section class="mailing">
+
           <h2 class="mailing-title">Подпишитесь на рассылку</h2>
           <p class="mailing-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="e-mail" action="https://echo.htmlacademy.ru/" method="post">
+
+          <form class="e-mail-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="form-e-mail">
               <label class="visually-hidden" for="email">e-mail</label>
-              <input id="email" type="text" name="e-mail" placeholder="Ваш e-mail">
+              <input class="field" id="email" type="text" name="e-mail" placeholder="Ваш e-mail">
             </p>
             <button class="button button-mailing button-blue" type="submit">Подписаться</button>
           </form>
+
         </section>
       </main>
 
@@ -225,7 +228,58 @@
         </div>
       </footer>
 
-    </div>
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-auth">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+            <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="field-group">
+                <label class="visually-hidden" for="check-in">Дата Заезда</label>
+                Дата заезда: <input class="booking-form-field" type="text" id="check-in" name="checkin"
+                  value="27 апреля 2020" required>
+                 <p class="checkin-text">Мы не можем отправить вас в прошлое.</p>
+              </p>
+              <p class="field-group">
+                <label class="visually-hidden" for="check-out">Дата выезда</label>
+                Дата выезда: <input class="booking-form-field" type="text" id="check-out" name="checkout"
+                  value="1 сентября 2023" required>
+                  <p class="checkout-text">На эти даты есть свободные номера. Пока есть.</p>
+              </p>
+              <div class="guest">
+                <label class="visually-hidden" for="adult">взрослые</label>
+                Взрослые: <input class="booking-form-field booking-form-field-guest" type="number" id="adult"
+                  name="adult-guest" value="2" required>
+
+                <span class="form-label">
+                  <label class="visually-hidden" for="child">дети</label>
+                  Дети:
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" id="tooltip-label-date">
+                      <svg class="toolip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff" />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до
+                      18 лет. Дети до 6 лет размещаются бесплатно.
+
+                    </span>
+                  </span>
+                </span>
+
+                <input class="booking-form-field booking-form-field-guest" type="number" id="child" name="child-guest"
+                  value="2">
+              </div>
+              <button class="button button-modal button-blue" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+
+      </div>
   </body>
 
 </html>
