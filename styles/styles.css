@@ -39,8 +39,6 @@ body{
   line-height: 21px;
   color: #000000;
   background: #F2F2F2;
-  padding-left: 40px;
-  padding-right: 40px;
   margin: 0;
 }
 
@@ -172,19 +170,29 @@ body{
   margin: 0;
  }
 
-.navigation-link {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
+ .navigation-item {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 32px;
+  display: block;
+  box-sizing: border-box;
+ }
+
+.navigation-link {
+  position: relative;
   text-transform: capitalize;
   color: #000000;
   text-decoration:none;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.navigation-item-here {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: block;
+  box-sizing: border-box;
 }
 
 .navigation-link-current{
@@ -195,8 +203,17 @@ body{
   content: "";
   position: absolute;
   bottom: -1px;
-  right: 31px;
-  width: calc(100% - 31px);
+  right: 30px;
+  width: 93px;
+  border-bottom: 2px solid #756257;
+}
+
+.navigation-link-current-main::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 1px;
+  width: 68px;
   border-bottom: 2px solid #756257;
 }
 
@@ -225,8 +242,8 @@ body{
   font-size: 10px;
   line-height: 10px;
   position: absolute;
-  left: 15px;
-  top: 13px;
+  left: 11px;
+  top: -3px;
   padding: 3px;
 }
 
@@ -242,8 +259,6 @@ body{
   border-radius: 4px;
   color: #FFFFFF;
   background-color: #756157;
-  margin-top: 14px;
-  margin-bottom: 14px;
   padding: 8px 34px 8px 34px;
   cursor: pointer;
 }
@@ -446,11 +461,13 @@ body{
 
 .mailing {
   color:white;
-  background-color:rgba(131, 179, 211, 0.2);
+  background-color:#82B3D3;
   background-image: url(../images/background-mailing.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
+  background-size: cover;
+
 }
 
 .mailing-title {
@@ -546,7 +563,7 @@ border: none;
 }
 
 .footer-social-link:hover {
-  color: #68A2CA;;
+  color: #68A2CA;
 }
 
 .footer-social-link:focus {
@@ -555,6 +572,7 @@ border: none;
 
 .footer-social-link:active {
   color: rgba(104, 162, 202, 0.3);
+  opacity: 0.3;
 }
 
 .contacts-phone {
@@ -1083,10 +1101,9 @@ a {
   margin-bottom: 60px;
   padding: 0;
   list-style-type: none;
-
 }
 
-.pagination-link:not(.pagination-point) {
+.pagination-link:not(.pagination-point){
   display: block;
   box-sizing: border-box;
   min-width: 60px;
@@ -1101,19 +1118,18 @@ a {
   border-radius: 4px;
 }
 
+.pagination-current {
+  background: #F2F2F2;
+  color: #000000;
+}
+
 .pagination-point {
   display: block;
   min-width: 60px;
   padding: 25px 0;
   margin:0;
   text-align: center;
-  min-width: 60px;
   box-sizing: border-box;
-}
-
-.pagination-current {
-  background: #F2F2F2;
-  color: #000000;
 }
 
 .pagination-link:not(.pagination-current):hover {
@@ -1275,6 +1291,8 @@ a {
   Width: 577px
 }
 
+
+/*хочу вот так поставить календарь*/
 input:required {
   background-image: url(../images/icon-date.svg);
   background-repeat: no-repeat;
