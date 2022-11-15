@@ -72,9 +72,9 @@ body{
   background: #615048;
 }
 
-.button-brow:focus {
+.button-brow:focus-visible {
   background: #615048;
-  outline: none;
+
 }
 
 .button-brow:active {
@@ -86,9 +86,8 @@ body{
   background: #68A2CA;
 }
 
-.button-blue:focus {
+.button-blue:focus-visible {
   background: #68A2CA;
-  outline: none;
 }
 
 .button-blue:active {
@@ -140,7 +139,7 @@ body{
 .navigation-logo {
   display: block;
   box-sizing: border-box;
-  margin-right: 44px;
+  margin-right: 28px;
   margin-bottom: -10px;
   z-index:1;
 }
@@ -150,7 +149,6 @@ body{
   justify-content: space-between;
   width: 946px;
 }
-
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +157,6 @@ body{
   margin: 0;
   list-style-type: none;
 }
-
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
@@ -169,17 +166,14 @@ body{
   width: 290px;
   margin: 0;
  }
-
- .navigation-item {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 32px;
-  display: block;
-  box-sizing: border-box;
- }
-
 .navigation-link {
   position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 16px;
+  padding-left: 16px;
   text-transform: capitalize;
   color: #000000;
   text-decoration:none;
@@ -188,34 +182,15 @@ body{
   line-height: 24px;
 }
 
-
-.navigation-item-here {
-  padding-top: 14px;
-  padding-bottom: 14px;
-  display: block;
-  box-sizing: border-box;
+.navigation-user
+.navigation-link {
+  min-height: 64px;
+  min-width: 42px;
+  padding: 0;
 }
 
 .navigation-link-current{
   position: relative;
-}
-
-.navigation-link-current::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  right: 30px;
-  width: 93px;
-  border-bottom: 2px solid #756257;
-}
-
-.navigation-link-current-main::after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  right: 1px;
-  width: 68px;
-  border-bottom: 2px solid #756257;
 }
 
 .navigation-icon {
@@ -225,7 +200,6 @@ body{
   bottom: 0;
   left: 0;
   margin: auto;
-  padding-top: 23px;
 }
 
 .heart {
@@ -243,8 +217,8 @@ body{
   font-size: 10px;
   line-height: 10px;
   position: absolute;
-  left: 11px;
-  top: -3px;
+  left: 23px;
+  top: 13px;
   padding: 3px;
 }
 
@@ -262,6 +236,35 @@ body{
   background-color: #756157;
   padding: 8px 34px 8px 34px;
   cursor: pointer;
+}
+
+.navigation-item-here {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.navigation-link-current{
+  position: relative;
+}
+
+.navigation-link-current::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 15px;
+  width: 93px;
+  border-bottom: 2px solid #756257;
+}
+
+.navigation-link-current-main::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 16px;
+  width: 68px;
+  border-bottom: 2px solid #756257;
 }
 
 .main-index {
@@ -431,7 +434,6 @@ body{
   text-align: center;
   text-transform: uppercase;
   margin: 96px 451px 20px 451px;
-
 }
 
 .booking-description {
@@ -468,7 +470,6 @@ body{
   background-position: center;
   background-attachment: scroll;
   background-size: cover;
-
 }
 
 .mailing-title {
@@ -704,7 +705,6 @@ a {
 
 .breadcrumbs-link:focus {
   color: #FFFFFF;
-  outline: none;
 }
 
 .breadcrumbs-link:active {
