@@ -882,13 +882,14 @@ a {
   opacity: 0.3;
 }
 
-.control-input:focus {
-  outline: 3px solid #83B3D3;
+.control-input +.control-mark:focus {
+  outline: 2px solid #83B3D3;
 }
 
 .control:active {
  opacity: 0.4;
 }
+
 
 .button-container {
   display: grid;
@@ -1010,28 +1011,39 @@ a {
   height: 48px;
   background-position: bottom;
   position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
 }
 
 .button-icon-view {
+ padding: 0 44px;
+}
+
+.icon-view {
   position: absolute;
   top: 14px;
-  right: 16px;
+  left: 14px;
 }
+
 
 .button-icon-current {
   border: 2px solid #000000;
 }
 
-.button-icon-item:hover {
-  border: 2px solid #000000
+.button-icon-view:hover {
+ outline: 2px solid #000000;
+ border-radius: 4px;
 }
 
-.button-icon-item:focus {
-  outline: 2px solid #68A2CA;
+.button-icon-view:focus-visible {
+  outline: 2px solid #83B3D3;
+  border-radius: 4px;
 }
 
-.button-icon-item:active {
-  border: 2px solid #000000;
+.button-icon-view:active {
+  outline: 2px solid #000000;
+  border-radius: 4px;
 }
 
 .product-container {
