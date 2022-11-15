@@ -188,6 +188,7 @@ body{
   line-height: 24px;
 }
 
+
 .navigation-item-here {
   padding-top: 14px;
   padding-bottom: 14px;
@@ -515,6 +516,8 @@ font-size: 18px;
 line-height: 24px;
 background: #F2F2F2;
 border: none;
+border-radius: 4px 0 0 4px;
+font-family: inherit;
 }
 
 .button-mailing {
@@ -572,7 +575,6 @@ border: none;
 
 .footer-social-link:active {
   color: rgba(104, 162, 202, 0.3);
-  opacity: 0.3;
 }
 
 .contacts-phone {
@@ -779,6 +781,7 @@ a {
   font-size: 18px;
   line-height: 24px;
   position: relative;
+  font-family: inherit ;
 }
 
 .range-input-min {
@@ -796,12 +799,36 @@ a {
 
 .range-input:focus {
   background: #E6E6E6;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .range-input:active {
   background: #F2F2F2;
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
+}
+
+.catalog-filter-label {
+  position: relative;
+}
+
+.min-price::after  {
+  position: absolute;
+  content: "от";
+  color: #000000;
+  z-index: 1;
+  bottom: 14px;
+  right: 20px;
+  opacity: 0.3;
+}
+
+.max-price::after {
+  position: absolute;
+  content: "до";
+  color: #000000;
+  z-index: 1;
+  opacity: 0.3;
+  bottom: 14px;
+  right: 20px;
 }
 
 .control {
@@ -843,7 +870,8 @@ a {
 .control-input[type="radio"]:checked + .control-mark-circle {
   background-image: url(../images/check-circle.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top 5px right 4px;;
+
  }
 
 .control:disabled + .control-mark {
@@ -967,24 +995,42 @@ a {
 .button-icon {
   display: flex;
   flex-wrap: wrap;
-  width: 160px;
-  height: 48px;
+  min-width: 160px;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  justify-content: space-around;
-  align-items: center;
+  gap: 7px;
+
 }
 
-.button-icon-view:hover {
+.button-icon-item {
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  width: 48px ;
+  height: 48px;
+  background-position: bottom;
+  position: relative;
+}
+
+.button-icon-view {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
+
+.button-icon-current {
+  border: 2px solid #000000;
+}
+
+.button-icon-item:hover {
   border: 2px solid #000000
 }
 
-.button-icon-view:focus {
+.button-icon-item:focus {
   outline: 2px solid #68A2CA;
 }
 
-.button-icon-view:active {
+.button-icon-item:active {
   border: 2px solid #000000;
 }
 
@@ -1103,7 +1149,7 @@ a {
   list-style-type: none;
 }
 
-.pagination-link:not(.pagination-point){
+.pagination-link {
   display: block;
   box-sizing: border-box;
   min-width: 60px;
@@ -1161,9 +1207,9 @@ a {
   background: rgba(242, 242, 242, 0.8);
 }
 
-/*.modal-container-close {
+.modal-container-close {
   display: none;
-}*/
+}
 
 .modal {
   position: relative;
@@ -1226,6 +1272,7 @@ a {
   text-transform: uppercase;
   margin:0;
   padding-bottom: 76px;
+  padding-right: 35px;
 }
 
 .booking-form-field {
@@ -1233,13 +1280,32 @@ a {
   margin: 0;
   border-radius: 4px;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 35px 12px 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
   width: 440px;
   box-sizing: border-box;
+}
+
+.booking-form-field::placeholder {
+  opacity: 1;
+  color:#000000;
+}
+
+.booking-form-field:hover {
+  background: #E6E6E6;
+}
+
+.booking-form-field:focus-visible {
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.booking-form-field:active {
+  background: #F2F2F2;
+  outline: 2px solid #000000;
 }
 
 .field-group {
@@ -1249,39 +1315,103 @@ a {
   margin: 0;
 }
 
-.checkin-text {
-  color: #FF5757;
-  padding-top: 4px;
-  padding-left: 157px;
-  padding-bottom: 23px;
+.field-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-error {
+  position: absolute;
+  top: 50px;
+  left: 0;
   margin: 0;
+  padding: 0 20px;
+  color:#FF5757;
+  font-family: 'PT Sans';
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
 }
 
-.checkout-text {
+.form-text {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  margin: 0;
+  padding: 0 20px;
+  font-family: 'PT Sans';
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   color: #333333;
-  padding-top: 4px;
-  padding-left: 157px;
-  padding-bottom: 23px;
-  margin: 0;
 }
 
-.guest {
-  display:flex;
-  justify-content: space-between;
-  padding-bottom: 48px;
-  width: 577px;
-  align-items: center;
+input:required {
+  background-image: url(../images/icon-date.svg);
+  background-repeat: no-repeat;
+  background-position: center right 17px;
 }
 
 .booking-form-field-guest {
   width: 110px;
   box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 39px;
+  text-align: center;
+}
+
+.guest-wrapper {
+  display: grid;
+  grid-template-columns: 247px 242px;
+  column-gap: 83px;
+}
+
+.guest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.field-btn {
+  position: absolute;
+  background-color:#F2F2F2;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 ;
+}
+
+.field-btn:hover {
+  color:#000000;
+}
+/*не получается стилизовать кнопки - и +*/
+
+.field-btn-minus {
+  left: 13px;
+  top:20px;
+}
+
+.field-btn-plus {
+  right: 12px;
+  opacity: 0.3;
+}
+
+.minus-icon {
+  color:#756157;
+  opacity: 0.3;
+}
+
+.plus-icon {
+  color:#756157;
 }
 
 .button-modal {
@@ -1289,14 +1419,6 @@ a {
   background: #83B3D3;
   border-radius: 10px;
   Width: 577px
-}
-
-
-/*хочу вот так поставить календарь*/
-input:required {
-  background-image: url(../images/icon-date.svg);
-  background-repeat: no-repeat;
-  background-position: right;
 }
 
 .tooltip {
