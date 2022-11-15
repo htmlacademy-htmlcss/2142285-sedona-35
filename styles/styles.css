@@ -1026,7 +1026,6 @@ a {
   left: 14px;
 }
 
-
 .button-icon-current {
   border: 2px solid #000000;
 }
@@ -1182,13 +1181,19 @@ a {
 }
 
 .pagination-point {
-  display: block;
-  min-width: 60px;
-  padding: 25px 0;
-  margin:0;
-  text-align: center;
-  box-sizing: border-box;
-}
+    background: transparent;
+    color: #000000;
+    display: block;
+    box-sizing: border-box;
+    min-width: 60px;
+    padding: 11px 23px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    margin: 4px;
+    border-radius: 4px;
+  }
 
 .pagination-link:not(.pagination-current):hover {
   background: #68A2CA;
@@ -1219,9 +1224,9 @@ a {
   background: rgba(242, 242, 242, 0.8);
 }
 
-.modal-container-close {
+/*.modal-container-close {
   display: none;
-}
+}*/
 
 .modal {
   position: relative;
