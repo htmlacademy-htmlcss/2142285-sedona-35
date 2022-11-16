@@ -54,6 +54,7 @@ body{
 }
 
 .button {
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -457,7 +458,7 @@ body{
   background-color: #756157;
   border-radius: 4px;
   width: 376px;
-  margin: 0 412px 90px 412px;
+  margin: 0 412px 95px 412px;
   padding: 8px 26px 8px 26px;
 }
 
@@ -503,17 +504,11 @@ width: 684px;
 
 .form-e-mail {
   margin: 0;
-  width: 452px;
-}
-
-.e-mail {
-  flex-grow: 1;
-  margin: 0;
 }
 
 .field {
 padding: 14px 20px 14px 20px;
-width: 452px;
+width: 416px;
 font-size: 18px;
 line-height: 24px;
 background: #F2F2F2;
@@ -523,8 +518,8 @@ font-family: inherit;
 }
 
 .button-mailing {
-  padding: 8px 42px 8px 42px;
-  margin-bottom: 112px;
+  padding: 8px 50px 8px 50px;
+  margin-bottom: 105px;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -552,15 +547,23 @@ font-family: inherit;
   margin: 0;
   padding: 0;
   width: 162px;
+  gap: 30px
 }
 
 .footer-social-item {
   display: block;
   width: 24px;
   height: 14px;
-  padding-top: 48px;
+  padding-top: 56px;
   padding-bottom: 47px;
-  margin-right: 29px;
+}
+
+.footer-social-vk {
+  padding-left: 10px;
+}
+
+.footer-social-telegram {
+  padding-left: 10px;
 }
 
 .footer-social-link {
@@ -592,7 +595,7 @@ font-family: inherit;
   text-decoration:none;
   display: block;
   box-sizing: border-box;
-  margin-top: 38px;
+  margin-top: 42px;
   margin-bottom: 35px;
   margin-right: 10px;
 }
@@ -614,8 +617,9 @@ font-family: inherit;
   display: block;
   box-sizing: border-box;
   width: 120px;
-  padding-top: 42px;
+  padding-top: 44px;
   padding-bottom: 38px;
+  padding-left: 8px;
 }
 
 .logohtml {
@@ -668,9 +672,11 @@ a {
 
 .breadcrumbs {
   list-style-type: none;
-  margin:0;
   padding: 0;
   display: flex;
+  margin-top: 6px;
+  margin-bottom: 39px;
+  margin-left: 3px;
 }
 
 .breadcrumbs-link {
@@ -678,12 +684,6 @@ a {
   font-size: 16px;
   line-height: 21px;
   display: inline-block;
-}
-
-.breadcrumbs-item {
-  margin-top: 8px;
-  margin-bottom: 38px;
-  margin-left: 3px;
 }
 
 .breadcrumbs-item:not(:first-child)::before {
@@ -727,6 +727,7 @@ a {
 .filter-container-right {
   display: grid;
   grid-template-columns: 288px 191px;
+  align-items: flex-start;
   gap: 70px;
 }
 
@@ -738,8 +739,9 @@ a {
 
 .range-bar {
   position: absolute;
-  height: 4px;
   background-color: #888684;
+  height: 4px;
+
 }
 
 .range-toggle {
@@ -754,12 +756,12 @@ a {
 
 .toggle-min {
   top: -8px;
-  left: -250px;
+  left: -228px;
 }
 
 .toggle-max {
   top: -8px;
-  right: 40px;
+  right: 61px;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -770,7 +772,7 @@ a {
 
 .range-wrapper-inputs {
   display: flex;
-  padding-bottom: 48px;
+  padding-bottom: 42px;
 }
 
 .range-input {
@@ -894,12 +896,16 @@ a {
 
 .button-container {
   display: grid;
-  row-gap: 11px;
+  row-gap: 44px;
   padding-top: 55px;
 }
 
 .button-rest {
   background: transparent;
+}
+
+.button-apply {
+  height: 36px;
 }
 
 .button-rest:hover {
@@ -970,6 +976,7 @@ a {
 }
 
 .select-control {
+  font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   width: 292px;
@@ -1049,7 +1056,7 @@ a {
   background-color: #FFFFFF;
   padding-left: 70px;
   padding-right: 70px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .product-list {
@@ -1102,7 +1109,6 @@ a {
   align-items: center;
   background: #82B3D3;
   padding: 8px 20px 8px 20px;
-
 }
 
 .product-card-button-green {
@@ -1113,12 +1119,12 @@ a {
 
 .product-card-price {
   text-align: right;
-  padding-top: 10px;
+  padding-top: 16px;
   margin:0;
 }
 
 .hotel {
-  padding-top: 10px;
+  padding-top: 16px;
   margin: 0;
 }
 
@@ -1159,7 +1165,7 @@ a {
 .catalog-line {
   width: 1060px;
   border: 1px solid #E6E6E6;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
 .pagination{
@@ -1236,9 +1242,9 @@ a {
   background: rgba(242, 242, 242, 0.8);
 }
 
-.modal-container-close {
+/*.modal-container-close {
   display: none;
-}
+}*/
 
 .modal {
   position: relative;
@@ -1300,7 +1306,7 @@ a {
   line-height: 36px;
   text-transform: uppercase;
   margin:0;
-  padding-bottom: 76px;
+  padding-bottom: 65px;
   padding-right: 35px;
 }
 
@@ -1316,11 +1322,14 @@ a {
   color: #000000;
   width: 440px;
   box-sizing: border-box;
+  position: relative;
 }
 
-.booking-form-field::placeholder {
-  opacity: 1;
-  color:#000000;
+.modal-icon-date {
+  position: absolute;
+  top: 15px;
+  right:21px;
+  opacity: 0.6;
 }
 
 .booking-form-field:hover {
@@ -1353,6 +1362,7 @@ a {
 
 .input-wrapper {
   position: relative;
+  display: flex;
 }
 
 .form-error {
@@ -1383,26 +1393,30 @@ a {
   color: #333333;
 }
 
-input:required {
-  background-image: url(../images/icon-date.svg);
-  background-repeat: no-repeat;
-  background-position: center right 17px;
+.guest-wrapper {
+  display: grid;
+  grid-template-columns: 247px 242px;
+  column-gap: 87px;
+}
+
+.guest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
 }
 
 .booking-form-field-guest {
   width: 110px;
   box-sizing: border-box;
-  padding-left: 40px;
-  padding-right: 39px;
+  padding-left: 37px;
   text-align: center;
 }
-
 .guest-wrapper {
   display: grid;
   grid-template-columns: 247px 242px;
   column-gap: 83px;
 }
-
 .guest {
   display: flex;
   justify-content: space-between;
@@ -1418,34 +1432,50 @@ input:required {
   transform: translateY(-50%);
   padding: 0 ;
   font-family: inherit;
+  width: 20px;
+  height: 20px;
+}
+
+.field-btn:hover svg {
+  color:#000000;
+  opacity: 1;
+}
+
+.field-btn:focus {
+  color: #000000;
+  opacity: 1;
+  outline: 3px solid #83B3D3;
+}
+
+.field-btn:active {
+  color: #000000;
+  opacity: 0.3;
 }
 
 .minus-icon {
-  fill:#000000;
+  background-color:#000000;
   opacity: 0.3;
 }
 
 .plus-icon {
-  color:#756157;
-}
-
-.field-btn:hover .minus-icon {
-  color:#000000;
-
-}
-
-/*не получается стилизовать кнопки - и +*/
-
-.field-btn-minus {
-  left: 13px;
-  top:20px;
+  color: #000000;
+  opacity: 0.3;
 }
 
 .field-btn-plus {
   right: 12px;
-  opacity: 0.3;
 }
 
+.field-btn-minus {
+  top: 19px;
+  left: 12px;
+}
+
+.button-modal {
+  padding:18px 77px 18px 77px;
+  width: 577px;
+  height: 60px;
+}
 
 .tooltip {
   position: absolute;
