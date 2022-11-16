@@ -74,7 +74,6 @@ body{
 
 .button-brow:focus-visible {
   background: #615048;
-
 }
 
 .button-brow:active {
@@ -163,7 +162,7 @@ body{
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
-  width: 290px;
+  width: 268px;
   margin: 0;
  }
 .navigation-link {
@@ -196,7 +195,7 @@ body{
 .navigation-icon {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 15px;
   bottom: 0;
   left: 0;
   margin: auto;
@@ -217,7 +216,7 @@ body{
   font-size: 10px;
   line-height: 10px;
   position: absolute;
-  left: 23px;
+  left: 10px;
   top: 13px;
   padding: 3px;
 }
@@ -234,7 +233,7 @@ body{
   border-radius: 4px;
   color: #FFFFFF;
   background-color: #756157;
-  padding: 8px 34px 8px 34px;
+  padding: 8px 36px 8px 36px;
   cursor: pointer;
 }
 
@@ -458,7 +457,7 @@ body{
   background-color: #756157;
   border-radius: 4px;
   width: 376px;
-  margin: 0 412px 104px 412px;
+  margin: 0 412px 90px 412px;
   padding: 8px 26px 8px 26px;
 }
 
@@ -480,7 +479,7 @@ body{
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  padding-top: 96px;
+  padding-top: 100px;
   padding-bottom: 20px;
 }
 
@@ -499,10 +498,12 @@ body{
 .e-mail-form {
 display: flex;
 padding-left: 258px;
+width: 684px;
 }
 
 .form-e-mail {
   margin: 0;
+  width: 452px;
 }
 
 .e-mail {
@@ -522,7 +523,7 @@ font-family: inherit;
 }
 
 .button-mailing {
-  padding: 8px 50px 8px 50px;
+  padding: 8px 42px 8px 42px;
   margin-bottom: 112px;
   font-style: normal;
   font-weight: 700;
@@ -557,9 +558,9 @@ font-family: inherit;
   display: block;
   width: 24px;
   height: 14px;
-  padding-top: 57px;
+  padding-top: 48px;
   padding-bottom: 47px;
-  margin-right: 27px;
+  margin-right: 29px;
 }
 
 .footer-social-link {
@@ -591,8 +592,9 @@ font-family: inherit;
   text-decoration:none;
   display: block;
   box-sizing: border-box;
-  margin-top: 45px;
+  margin-top: 38px;
   margin-bottom: 35px;
+  margin-right: 10px;
 }
 
 .contacts-phone:hover {
@@ -612,7 +614,7 @@ font-family: inherit;
   display: block;
   box-sizing: border-box;
   width: 120px;
-  padding-top: 48px;
+  padding-top: 42px;
   padding-bottom: 38px;
 }
 
@@ -651,7 +653,7 @@ a {
 
 .header-text {
   color: #FFFFFF;
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 55px 70px;
 }
 
 .inner-header-title {
@@ -680,7 +682,7 @@ a {
 
 .breadcrumbs-item {
   margin-top: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   margin-left: 3px;
 }
 
@@ -890,11 +892,10 @@ a {
  opacity: 0.4;
 }
 
-
 .button-container {
   display: grid;
-  row-gap: 40px;
-  padding-top: 60px;
+  row-gap: 11px;
+  padding-top: 55px;
 }
 
 .button-rest {
@@ -917,11 +918,6 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button-apply {
-  align-items: center;
-  padding: 8px 50px;
-}
-
 .reset-button:disabled {
   opacity: 0.1;
 }
@@ -930,6 +926,7 @@ a {
   display: flex;
   border: 0;
   padding: 0;
+  margin: 0;
 }
 
 .catalog-filter-list {
@@ -957,17 +954,19 @@ a {
   margin-left: 70px;
   margin-right: 70px;
   margin-top: 50px;
-  margin-bottom: 46px;
+  margin-bottom: 40px;
   padding: 0;
 }
 
 .find {
+  font-family: inherit;
+  text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   margin: 0;
-  padding: 0;
+  padding-top:10px;
 }
 
 .select-control {
@@ -982,6 +981,7 @@ a {
   appearance: none;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  margin-left: 130px;
 }
 
 .select-control:hover,
@@ -1068,7 +1068,7 @@ a {
   width: 340px;
   box-sizing: border-box;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   border: 1px solid #E6E6E6;
   flex-grow: 1;
 }
@@ -1078,11 +1078,11 @@ a {
   grid-template-rows: min-content auto min-content;
   grid-template-columns: 140px 140px;
   column-gap: 20px;
-  row-gap: 16px;
+  row-gap: 14px;
 }
 
 .product-card-title {
-  padding-top: 16px;
+  padding-top: 13px;
   margin: 0;
   font-style: normal;
   font-weight: 700;
@@ -1113,24 +1113,34 @@ a {
 
 .product-card-price {
   text-align: right;
+  padding-top: 10px;
+  margin:0;
+}
+
+.hotel {
+  padding-top: 10px;
+  margin: 0;
 }
 
 .hotel-stars-4 {
- background-image: url("../images/hotel-star.svg");
- background-repeat: space;
- width: 80px
+  background-image: url("../images/hotel-star.svg");
+  background-repeat: space;
+  width: 80px;
+  height: 17px;
 }
 
 .hotel-stars-3 {
   background-image: url("../images/hotel-star.svg");
   background-repeat: space;
-  width: 60px
+  width: 60px;
+  height: 17px;
 }
 
 .hotel-stars-2 {
   background-image: url("../images/hotel-star.svg");
   background-repeat: space;
-  width: 40px
+  width: 40px;
+  height: 17px;
 }
 
 .raiting {
@@ -1142,20 +1152,22 @@ a {
   text-transform: uppercase;
   background: #F2F2F2;
   border-radius: 4px;
+  margin-bottom: 5px;
+  padding-top: 2px;
 }
 
 .catalog-line {
   width: 1060px;
   border: 1px solid #E6E6E6;
-  margin-bottom: 40px;
+  margin-bottom: 22px;
 }
 
 .pagination{
   display: flex;
   box-sizing: border-box;
   margin-left: 70px;
-  margin-top: 10px;
-  margin-bottom: 60px;
+  margin-top: 5px;
+  margin-bottom: 59px;
   padding: 0;
   list-style-type: none;
 }
@@ -1224,9 +1236,9 @@ a {
   background: rgba(242, 242, 242, 0.8);
 }
 
-/*.modal-container-close {
+.modal-container-close {
   display: none;
-}*/
+}
 
 .modal {
   position: relative;
@@ -1400,16 +1412,28 @@ input:required {
 
 .field-btn {
   position: absolute;
-  background-color:#F2F2F2;
+  background-color:transparent;
   border: none;
   top: 50%;
   transform: translateY(-50%);
   padding: 0 ;
+  font-family: inherit;
 }
 
-.field-btn:hover {
-  color:#000000;
+.minus-icon {
+  fill:#000000;
+  opacity: 0.3;
 }
+
+.plus-icon {
+  color:#756157;
+}
+
+.field-btn:hover .minus-icon {
+  color:#000000;
+
+}
+
 /*не получается стилизовать кнопки - и +*/
 
 .field-btn-minus {
@@ -1422,21 +1446,6 @@ input:required {
   opacity: 0.3;
 }
 
-.minus-icon {
-  color:#756157;
-  opacity: 0.3;
-}
-
-.plus-icon {
-  color:#756157;
-}
-
-.button-modal {
-  padding: 18px 77px;
-  background: #83B3D3;
-  border-radius: 10px;
-  Width: 577px
-}
 
 .tooltip {
   position: absolute;
