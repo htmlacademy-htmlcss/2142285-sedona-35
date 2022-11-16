@@ -18,14 +18,14 @@
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="index.html">Главная
+              <a class=" navigation-link" href="index.html">Главная
               </a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">О седоне
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-link-current">
               <a class="navigation-link" href="catalog.html">Гостиницы
               </a>
             </li>
@@ -59,7 +59,7 @@
                 </span>
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item-here">
               <a class="navigation-link-here button-brow button" href="#">
                 Хочу сюда
               </a>
@@ -106,7 +106,7 @@
                         <label class="control">
                           <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
                           <span class="control-mark"></span>
-                          <span class="control-label"> Бассейн </label>
+                          <span class="control-label"> Бассейн </span>
                         </label>
                       </li>
                       <li class="catalog-filter-item">
@@ -122,8 +122,6 @@
                           <span class="control-mark"></span>
                           <span class="control-label"> Wi-fi </span>
                         </label>
-
-
                       </li>
                     </ul>
                   </fieldset>
@@ -132,7 +130,8 @@
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
                         <label class="control">
-                          <input class="control-input visually-hidden" type="radio" name="typehouse" value="hotel" checked>
+                          <input class="control-input visually-hidden" type="radio" name="typehouse" value="hotel"
+                            checked>
                           <span class="control-mark-circle"></span>
                           <span class="control-label"> Гостиница </span>
                         </label>
@@ -161,21 +160,24 @@
 
                     <div class="range">
                       <div class="range-wrapper-inputs">
-                        <label class="catalog-filter-label">
-                         <input class="range-input range-input-min" type="number" value="0" name="min-price" style="width: 143px" >
+                        <label class="catalog-filter-label min-price">
+                          <input class="range-input range-input-min" type="number" value="0" name="min-price"
+                            style="width: 143px">
+
                         </label>
-                        <label class="catalog-filter-label">
-                        <input class="range-input range-input-max" type="number" value="9000" name="max-price" style="width: 143px" >
+                        <label class="catalog-filter-label max-price">
+                          <input class="range-input range-input-max" type="number" value="9000" name="max-price"
+                            style="width: 143px">
                         </label>
                       </div>
 
 
                       <div class="range-scale">
-                        <div class="range-bar" style="right:0; width: 40px">
+                        <div class="range-bar" style="right:0; width: 60px">
                           <button class="range-toggle toggle-min" type="button">
                             <span class="visually-hidden">Изменить минимальную цену.</span>
                           </button>
-                          <button class="range-toggle toggle-max"  type="button">
+                          <button class="range-toggle toggle-max" type="button">
                             <span class="visually-hidden">Изменить минимальную цену.</span>
                           </button>
                         </div>
@@ -202,9 +204,10 @@
           </select>
 
           <ul class=" button-icon">
-            <li class="button-icon-item">
+            <li class="button-icon-item button-icon-current">
               <a class="button-icon-view" href="#">
-                <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="icon-view" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#a)" fill="#000">
                     <path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z" />
                   </g>
@@ -219,12 +222,13 @@
             </li>
             <li class="button-icon-item">
               <a class="button-icon-view" href="#">
-                <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="icon-view" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#a)" fill="#000">
                     <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" />
                   </g>
                   <defs>
-                    <clipPath id="a">
+                    <clipPath id="b">
                       <path fill="#fff" d="M0 0h16v14H0z" />
                     </clipPath>
                   </defs>
@@ -235,13 +239,14 @@
             </li>
             <li class="button-icon-item">
               <a class="button-icon-view" href="#">
-                <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="icon-view" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#a)" fill="#000">
                     <path
                       d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" />
                   </g>
                   <defs>
-                    <clipPath id="a">
+                    <clipPath id="c">
                       <path fill="#fff" d="M0 0h16v14H0z" />
                     </clipPath>
                   </defs>
@@ -343,22 +348,7 @@
             <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-point" href="#">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link visually-hidden" href="#">5</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link visually-hidden" href="#">6</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link visually-hidden" href="#">7</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link visually-hidden" href="#">8</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link visually-hidden" href="#">9</a>
+            <a class="pagination-point" href="#">...</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
