@@ -1311,6 +1311,7 @@ a {
 }
 
 .booking-form-field {
+  font-family: inherit;
   background: #F2F2F2;
   margin: 0;
   border-radius: 4px;
@@ -1411,6 +1412,7 @@ a {
   box-sizing: border-box;
   padding-left: 37px;
   text-align: center;
+  font-family: inherit;
 }
 .guest-wrapper {
   display: grid;
