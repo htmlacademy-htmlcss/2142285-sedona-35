@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../2142285-sedona-35/images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -12,7 +14,7 @@
     <div class="container">
       <header class="main-header">
         <a class="navigation-logo" href="index.html">
-          <img src="images/logo.svg" width="140" height="70" alt="логотип Sedona">
+          <img src="images/logo.svg" width="150" height="70" alt="логотип Sedona">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -60,7 +62,7 @@
             </li>
             <li class="navigation-item-here">
               <a class="navigation-link-here button-brow button" href="#">
-                Хочу сюда
+                Хочу сюда!
               </a>
             </li>
           </ul>
@@ -77,8 +79,8 @@
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html">
-                  <svg class="breadcrumbs-icon" width="13" height="15" viewBox="0 0 13 15" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                  <svg class="breadcrumbs-icon" aria-hidden="true" focusable="false" width="13" height="15"
+                    viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z" fill="#fff" />
                     <path d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z" fill="#fff" />
                   </svg>
@@ -118,7 +120,7 @@
                         <label class="control">
                           <input class="control-input visually-hidden" type="checkbox" name="wifi">
                           <span class="control-mark"></span>
-                          <span class="control-label"> Wi-fi </span>
+                          <span class="control-label"> Wi-Fi </span>
                         </label>
                       </li>
                     </ul>
@@ -176,7 +178,7 @@
                             <span class="visually-hidden">Изменить минимальную цену.</span>
                           </button>
                           <button class="range-toggle toggle-max" type="button">
-                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                            <span class="visually-hidden">Изменить максимальную цену.</span>
                           </button>
                         </div>
                       </div>
@@ -215,7 +217,7 @@
                     </clipPath>
                   </defs>
                 </svg>
-                <span class="visually-hidden">Показать карточки</span>
+                <span class="visually-hidden">Показать карточки.</span>
               </a>
             </li>
             <li class="button-icon-item">
@@ -232,7 +234,7 @@
                   </defs>
                 </svg>
 
-                <span class="visually-hidden">Показать слайдер</span>
+                <span class="visually-hidden">Показать слайдер.</span>
               </a>
             </li>
             <li class="button-icon-item">
@@ -249,7 +251,7 @@
                     </clipPath>
                   </defs>
                 </svg>
-                <span class="visually-hidden">Показать список</span>
+                <span class="visually-hidden">Показать список.</span>
               </a>
             </li>
           </ul>
@@ -260,7 +262,7 @@
             <li class="product-card">
               <a class="product-card-image-link" href="">
                 <img class="product-card-img" src="images/hotel-1.jpg" width="300" height="212"
-                  alt="Вид на звездное небо через ущелье">
+                  alt="Вид на звездное небо через ущелье.">
               </a>
               <a class="product-link" href="#">
                 <h3 class="product-card-title">Amara Resort & Spa</h3>
@@ -279,7 +281,7 @@
             <li class="product-card">
               <a class="product-link" href="#">
                 <img class="product-card-img" src="images/hotel-2.jpg" width="300" height="212"
-                  alt="Вид на горы с радугой">
+                  alt="Вид на горы с радугой.">
                 <h3 class="product-card-title">Villas at Poco Diablo</h3>
               </a>
               <div class="product-card-text">
@@ -296,7 +298,7 @@
             <li class="product-card">
               <a class="product-link" href="#">
                 <img class="product-card-img" src="images/hotel-3.jpg" width="300" height="212"
-                  alt="Вид на красные горы днем">
+                  alt="Вид на красные горы днем.">
                 <h3 class="product-card-title">Desert Quail Inn</h3>
               </a>
               <div class="product-card-text">
@@ -313,7 +315,7 @@
             <li class="product-card">
               <a class="product-link" href="#">
                 <img class="product-card-img" src="images/hotel-4.jpg" width="300" height="212"
-                  alt="Вид на красные горы ночью">
+                  alt="Вид на красные горы ночью.">
                 <h3 class="product-card-title">GreenTree Inn</h3>
               </a>
               <div class="product-card-text">
@@ -358,15 +360,14 @@
           <p class="mailing-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="e-mail-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="form-e-mail">
-              <label for="email" hidden>e-mail</label>
-              <input class="field" id="email" type="text" name="e-mail" placeholder="Ваш e-mail">
+              <label class="visually-hidden" for="email">e-mail</label>
+              <input class="field" id="email" type="text" name="e-mail" placeholder="Ваш e-mail" required>
             </p>
             <button class="button button-mailing button-blue" type="submit">Подписаться</button>
           </form>
         </section>
 
       </main>
-
 
       <footer class="page-footer">
         <div class="footer-container">
