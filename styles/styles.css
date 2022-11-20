@@ -1429,7 +1429,7 @@ a {
 .booking-form-field-guest {
   width: 110px;
   box-sizing: border-box;
-  padding-left: 37px;
+  padding-left: 36px;
   text-align: center;
   font-family: inherit;
 }
@@ -1437,7 +1437,7 @@ a {
 .guest-wrapper {
   display: grid;
   grid-template-columns: 247px 242px;
-  column-gap: 83px;
+  column-gap: 88px;
 }
 
 .guest {
@@ -1486,18 +1486,22 @@ a {
 }
 
 .field-btn-plus {
-  right: 12px;
+  right: 10px;
+  top: 25px;
 }
 
 .field-btn-minus {
   top: 19px;
-  left: 12px;
+  left: 10px;
 }
 
 .button-modal {
   padding: 18px 77px 18px 77px;
   width: 577px;
   height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .tooltip {
@@ -1519,18 +1523,23 @@ a {
   background: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  width: 256px;
+  width: 216px;
+  min-height: 110px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  padding: 15px 22px 18px 18px;
+  padding-top: 20px;
+  padding-bottom: 14px;
+  padding-left: 23px;
+  padding-right: 18px;
   color: #ffffff;
   position: absolute;
-  left: 50%;
-  transform: translateX(-46%);
+  left: 51%;
+  transform: translateX(-50%);
   z-index: 1;
   display: none;
+  margin-top: 8px;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -1540,12 +1549,11 @@ a {
 
 .tooltip-text::before {
   content: "";
+  background-image: url("../images/tooltip-arrow.svg");
   position: absolute;
   z-index: 1;
+  width: 19px;
   height: 9px;
-  bottom: 110px;
-  right: 140px;
-  border-left: 19px solid transparent;
-  border-right: 19px solid transparent;
-  border-bottom: 9px solid #333333;
+  top: -9px;
+  right: 120px
 }
