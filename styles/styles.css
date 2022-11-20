@@ -340,6 +340,7 @@ img {
   display: flex;
   background-color: #82b3d3;
   color: #ffffff;
+  align-items: flex-start;
   padding: 0;
   margin: 0;
 }
@@ -592,6 +593,7 @@ img {
 
 .footer-social-link:focus {
   color: #68a2ca;
+  outline: none;
 }
 
 .footer-social-link:active {
