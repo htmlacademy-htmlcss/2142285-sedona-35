@@ -236,6 +236,7 @@ img {
 
 .navigation-link-here {
   display: block;
+  width: 160px;
   box-sizing: border-box;
   font-style: normal;
   font-weight: 700;
@@ -246,7 +247,7 @@ img {
   border-radius: 4px;
   color: #ffffff;
   background-color: #756157;
-  padding: 8px 34px 8px 34px;
+  padding: 8px 10px 8px 10px;
   cursor: pointer;
 }
 
@@ -341,6 +342,12 @@ img {
   color: #ffffff;
   padding: 0;
   margin: 0;
+}
+
+.advantages-img {
+  max-width: 800px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .advantage-item {
@@ -476,7 +483,6 @@ img {
   background-color: #82b3d3;
   background-image: url("../images/background-mailing.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-attachment: scroll;
   background-size: cover;
 }
@@ -1138,7 +1144,7 @@ a {
 .product-card-button-green {
   align-items: center;
   background: #7db54f;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 18px 8px 18px;
 }
 
 .product-card-price {
